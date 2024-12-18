@@ -1,0 +1,64 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WonderLust</title>
+</head> -->
+<!-- <body> -->
+<% layout("/layouts/boilerplate") -%>
+<div class="row">
+  <div class="col-8 offset-2">
+    <h3>Edit your Listing</h3>
+    <form method="post" action="/listings/<%= listing._id %>?_method=PUT">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" name="listing[title]" placeholder="enter title" class="form-control" value="<%= listing.title %>">
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea name="listing[description]"class="form-control" ><%= listing.description %></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Image Link</label>
+        <input type="text" name="listing[image]" placeholder="enter url link" class="form-control" value="<%= listing.image %>">
+      </div>
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="price" class="form-label">Price</label>
+          <input type="number" name="listing[price]" placeholder="enter price"class="form-control"value="<%= listing.price %>">
+        </div>
+        <div class="mb-3 col-md-8">
+          <label for="location" class="form-label">Location</label>
+          <input type="text"name="listing[location]" placeholder="enter location"class="form-control"value="<%= listing.location %>">
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="country" class="form-label">Country</label>
+        <input type="text" name="listing[country]" placeholder="enter country name" class="form-control"value="<%= listing.country %>">
+      </div>
+
+      <button class="btn btn-dark add-btn">Edit</button>
+
+    </form>
+  </div>
+</div>
+
+
+
+
+
+  <!-- <h3>Edit listing</h3>
+  <form method="post" action="/listings/<%= listing._id %>?_method=PUT">
+    <input type="text" name="listing[title]" value="<%= listing.title %>">
+    <br><br>
+    <textarea rows="4" cols="50" name="listing[description]"><%= listing.description %></textarea><br><br>
+    <input type="text" name="listing[image]" value="<%= listing.image %>"/><br><br>
+    <input type="number" name="listing[price]" value="<%= listing.price %>"><br><br>
+    <input type="text"name="listing[location]" value="<%= listing.location %>"><br><br>
+    <input type="text" name="listing[country]" value="<%= listing.country %>"><br><br>
+    <button>Edit</button>
+
+  </form> -->
+<!-- </body> -->
+<!-- </html> -->

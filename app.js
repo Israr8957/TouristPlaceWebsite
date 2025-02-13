@@ -120,7 +120,7 @@ app.use((err, req, res, next) => {
   //res.status(statusCode).send(message);
   res.status(statusCode).render("error.ejs", { message });
 });
-
-app.listen(8080, () => {
-  console.log("listing on port 8080");
+const PORT = 8080;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
